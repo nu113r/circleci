@@ -23,3 +23,9 @@ test:
 general:
   artifacts:
     - "target/"
+
+deployment:
+  production: 
+    branch: master
+    commands:
+      - curl --upload-file target/*.war "http://tomcat:tomcat@54.224.127.242:8080/manager/deploy?path=/&update=true"
