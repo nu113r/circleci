@@ -19,3 +19,7 @@ machine:
 test:
   override:
     - mvn clean package
+
+general:
+  artifacts:
+    - "target/"
