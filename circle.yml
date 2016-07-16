@@ -5,8 +5,6 @@ machine:
     UTC # Set the timezone
   java:
     version: openjdk7
-  maven:
-    version: 2.2.1-19
 
   # Override /etc/hosts
   hosts:
