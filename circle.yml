@@ -1,0 +1,28 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    UTC # Set the timezone
+  java:
+    version: openjdk7
+  maven:
+    version: 2.2.1-19
+
+  # Override /etc/hosts
+  hosts:
+    circlehost: 127.0.0.1
+    dev.opstree.com: 127.0.0.1
+
+## Customize dependencies
+
+  # we automatically cache and restore many dependencies between
+  # builds. If you need to, you can add custom paths to cache:
+
+## Customize deployment commands
+deployment:
+  staging:
+    branch: master
+
+test:
+  override:
+    - mvn clean test
